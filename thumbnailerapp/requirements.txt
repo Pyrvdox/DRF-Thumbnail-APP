@@ -1,0 +1,7 @@
+Django4.2.2
+djangorestframework==3.14.0
+psycopg==3.1.9
+psycopg2-binary==2.9.6
+pytest==4.5.2
+pytest-django==7.4.0
+Pillow==10.0.1
