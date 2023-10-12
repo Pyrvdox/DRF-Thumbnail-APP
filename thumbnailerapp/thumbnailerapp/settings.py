@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'thumbnailerapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = DATABASES_INFO
+DATABASES = local_settings.DATABASES_INFO
 
 
 # Password validation

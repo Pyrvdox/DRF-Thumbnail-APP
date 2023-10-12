@@ -14,7 +14,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from datetime import datetime, timedelta
 from django.utils import timezone
-
+from .permissions import HasLinkPlanPermission
 
 class LoginView(generics.CreateAPIView):
     permission_classes = [AllowAny]
@@ -106,7 +106,7 @@ class ThumbnailView(APIView):
 
 class ExpiringLinkCreateView(generics.CreateAPIView):
     serializer_class = ExpiringLinkSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated, HasLinkPlanPermission]
     queryset = ExpiringLink.objects.all()
 
     def create(self, request, *args, **kwargs):
